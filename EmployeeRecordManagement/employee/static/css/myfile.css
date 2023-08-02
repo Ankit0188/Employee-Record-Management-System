@@ -13,3 +13,7 @@ border-radius:15px;
 .navbar-brand{
 font-weight : bold
 }
+
+.active{background-color : orange;
+border-radius : 20px;
+}

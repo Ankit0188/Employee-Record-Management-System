@@ -1,0 +1,101 @@
+
+{% extends 'emp_base.html' %}
+
+
+{% block main %}
+
+
+<div class="card shadow m-2">
+    <div class="card-body">
+        <a href="{% url 'edit_education' %}" class=" float-right m-3">Edit</a>
+        <h5 class="p-2 text-danger" style="border-bottom : 2px solid orange">My Education</h5>
+
+        <div class="container-fluid">
+            <table class="table table-bordered">
+                <tr>
+                    <th class="m-1 text-success" style="border-bottom : 1px solid gray">Post Graduation</th>
+                    <td>{{education.coursepg}}</td>
+                </tr>
+
+                <tr>
+                    <th>Institution Name</th>
+                    <td>{{education.schoolcollegepg}}</td>
+                </tr>
+
+                <tr>
+                    <th>Passing Year</th>
+                    <td>{{education.yearofpassingpg}}</td>
+                </tr>
+
+                <tr>
+                    <th>C.G.P.A.</th>
+                    <td>{{education.cgpapg}}</td>
+                </tr>
+
+                <tr>
+                    <th class="m-1 text-success" style="border-bottom : 1px solid gray">Graduation</th>
+                    <td>{{education.courseg}}</td>
+                </tr>
+
+                <tr>
+                    <th>Institution Name</th>
+                    <td>{{education.schoolcollegeg}}</td>
+                </tr>
+
+                <tr>
+                    <th>Passing Year</th>
+                    <td>{{education.yearofpassingg}}</td>
+                </tr>
+
+                <tr>
+                    <th>C.G.P.A.</th>
+                    <td>{{education.cgpag}}</td>
+                </tr>
+
+                <tr>
+                    <th class="m-1 text-success" style="border-bottom : 1px solid gray">Higher Secondary</th>
+                    <td>{{education.coursehsc}}</td>
+                </tr>
+
+                <tr>
+                    <th>Institution Name</th>
+                    <td>{{education.schoolcollegehsc}}</td>
+                </tr>
+
+                <tr>
+                    <th>Passing Year</th>
+                    <td>{{education.yearofpassinghsc}}</td>
+                </tr>
+
+                <tr>
+                    <th>G.P.A.</th>
+                    <td>{{education.cgpahsc}}</td>
+                </tr>
+
+                <tr>
+                    <th class="m-1 text-success" style="border-bottom : 1px solid gray">Secondary School Certificate</th>
+                    <td>{{education.coursessc}}</td>
+                </tr>
+
+                <tr>
+                    <th>Institution Name</th>
+                    <td>{{education.schoolcollegessc}}</td>
+                </tr>
+
+                <tr>
+                    <th>Passing Year</th>
+                    <td>{{education.yearofpassingssc}}</td>
+                </tr>
+
+                <tr>
+                    <th>G.P.A.</th>
+                    <td>{{education.cgpassc}}</td>
+                </tr>
+
+            </table>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

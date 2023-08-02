@@ -1,0 +1,123 @@
+
+{% extends 'emp_base.html' %}
+
+
+{% block main %}
+
+
+<div class="card shadow m-2">
+    <div class="card-body">
+        <a href="{% url 'my_education' %}" class=" float-right m-3">View Education Detail</a>
+        <h5 class="p-2 text-danger" style="border-bottom : 2px solid orange">Edit Education Detail</h5>
+
+        <div class="container-fluid">
+            <form method="post">
+                {% csrf_token %}
+
+            <table class="table table-bordered">
+                <tr>
+                    <th class="m-1 text-success" style="border-bottom : 1px solid gray">Post Graduation</th>
+                    <td><input type="text" name="coursepg" class="form-control" value="{{education.coursepg}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Institution Name</th>
+                    <td><input type="text" name="schoolcollegepg" class="form-control" value="{{education.schoolcollegepg}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Passing Year</th>
+                    <td><input type="date" name="yearofpassingpg" class="form-control" value="{{education.yearofpassingpg}}"></td>
+                </tr>
+
+                <tr>
+                    <th>C.G.P.A.</th>
+                    <td><input type="number" name="cgpapg" class="form-control" value="{{education.cgpapg}}"></td>
+                </tr>
+
+                <tr>
+                    <th class="m-1 text-success" style="border-bottom : 1px solid gray">Graduation</th>
+                    <td><input type="text" name="courseg" class="form-control" value="{{education.courseg}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Institution Name</th>
+                    <td><input type="text" name="schoolcollegeg" class="form-control" value="{{education.schoolcollegeg}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Passing Year</th>
+                    <td><input type="date" name="yearofpassingg" class="form-control" value="{{education.yearofpassingg}}"></td>
+                </tr>
+
+                <tr>
+                    <th>C.G.P.A.</th>
+                    <td><input type="number" name="cgpag" class="form-control" value="{{education.cgpag}}"></td>
+                </tr>
+
+                <tr>
+                    <th class="m-1 text-success" style="border-bottom : 1px solid gray">Higher Secondary</th>
+                    <td><input type="text" name="coursehsc" class="form-control" value="{{education.coursehsc}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Institution Name</th>
+                    <td><input type="text" name="schoolcollegehsc" class="form-control" value="{{education.schoolcollegehsc}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Passing Year</th>
+                    <td><input type="date" name="yearofpassinghsc" class="form-control" value="{{education.yearofpassinghsc}}"></td>
+                </tr>
+
+                <tr>
+                    <th>G.P.A.</th>
+                    <td><input type="number" name="cgpahsc" class="form-control" value="{{education.cgpahsc}}"></td>
+                </tr>
+
+                <tr>
+                    <th class="m-1 text-success" style="border-bottom : 1px solid gray">Secondary School Certificate</th>
+                    <td><input type="text" name="coursessc" class="form-control" value="{{education.coursessc}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Institution Name</th>
+                    <td><input type="text" name="schoolcollegessc" class="form-control" value="{{education.schoolcollegessc}}"></td>
+                </tr>
+
+                <tr>
+                    <th>Passing Year</th>
+                    <td><input type="date" name="yearofpassingssc" class="form-control" value="{{education.yearofpassingssc}}"></td>
+                </tr>
+
+                <tr>
+                    <th>G.P.A.</th>
+                    <td><input type="number" name="cgpassc" class="form-control" value="{{education.cgpassc}}"></td>
+                </tr>
+
+            </table>
+                <center><input type="submit" value="Submit" class="btn btn-primary m-1 px-1 py-1"></center>
+                </form>
+        </div>
+    </div>
+</div>
+
+<!---{% if error == "no" %}
+
+<script>
+    alert('Successfully Updated');
+    window.location = ('{% url 'my_education' %}');
+</script>
+{% endif %}
+
+{% if error == "yes" %}
+
+<script>
+    alert('Invalid Login. Try Again.');
+
+</script>
+
+{% endif %}-->
+
+
+{% endblock %}

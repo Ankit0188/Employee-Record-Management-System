@@ -1,0 +1,45 @@
+
+{% extends 'admin_base.html' %}
+
+{% block main %}
+
+
+
+
+<div class="card shadow m-2">
+    <div class="card-body">
+        <h5 class="p-2 text-danger" style="border-bottom: 2px solid orange">Employee Details</h5>
+
+        <div class="container-fluid table-responsive table-responsive-sm">
+            <table class="table table-bordered table-hover" id="example">
+                <thead class="text-primary bg-light primary m-0">
+                <tr>
+                    <th class="text">No.</th>
+                    <th class="text">Code</th>
+                    <th class="text">Name</th>
+                    <th class="text">Email Id</th>
+                    <th class="text">Contact</th>
+                    <th class="text">Joining</th>
+                    <th class="text">Action</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for i in employees %}
+                <tr>
+                    <td class="m-1 text">{{forloop.counter}}</td>
+                    <td class="m-1 text">{{i.empcode}}</td>
+                    <td class="m-1 text">{{i.user.first_name}}</td>
+                    <td class="m-1 text">{{i.user.username}}</td>
+                    <td class="m-1 text">{{i.empcontact}}</td>
+                    <td class="m-1 text">{{i.empjoinningdate}}</td>
+                    <!--<td class="m-1 text">{{forloop.counter}}</td>-->
+                    <td><a href="{% url 'delete_profile' i.user.id %}" class="text-info" onclick="return confirm('Are You Sure?')">Delete</a></td>
+                </tr>
+                {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
